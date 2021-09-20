@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Anagrafica clienti</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed" style="background-color: DarkSlateGray; ">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Anagrafica Clienti</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" id="input" placeholder="Cerca cliente" aria-label="Cerca cliente" aria-describedby="btnNavbarSearch" />
+                    <a class="btn btn-primary" id="search" type="button" href="cliente.html"><i class="fas fa-search"></i></a>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="login.html" id="logout">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <!--<div class="sb-sidenav-menu-heading">Core</div>-->
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                                home page
+                            </a>
+
+                            <div class="sb-sidenav-menu-heading">function</div>
+                            <a class="nav-link" href="lista.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-address-book"></i></div>
+                                lista clienti
+                            </a>
+
+                            <a class="nav-link" href="cliente.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-address-card"></i></div>
+                                info cliente
+                            </a>
+
+                            <a class="nav-link" href="add_cliente.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-plus"></i></div>
+                                aggiungi cliente
+                            </a>
+
+                            <a class="nav-link" href="delete_cliente.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-edit"></i></div>
+                                modifica cliente
+                            </a>
+                            </div>
+                        </div>
+                        <div class="sb-sidenav-footer" id="user">
+                            <div class="small">Logged in as:</div>
+                        </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <!--main-->
+                <main>
+                    <!-- form per la ricerca dell'utente[comboBox:nome,cognome,id]-->
+                    
+                    <br>
+                    <div>
+                        <h4 id="clienti" style="color: rgb(211, 73, 31); text-align: center;">Modifica cliente:</h4>
+                        <br>
+                    </div>
+                    
+
+                    <form class="container-fluid">
+                        <div class="row">
+                          <div class="col-md-2 col-xs-6">
+                            <label style="color: rgb(211, 73, 31);">id cliente</label>
+                            <input type="text" class="form-control" id="id" placeholder="">
+                          </div>
+                          <div class="col-md-1 col-xs-6">
+                              <label></label>
+                            <button type="button" class="btn btn-primary form-control" id="cerca">Cerca</button>    
+                          </div>
+                          <div class="col-md-1 col-xs-6">
+                            <label></label>
+                          <button type="button" class="btn btn-danger form-control" id="delete">Elimina</button>    
+                        </div>
+                        <div class="col-md-1 col-xs-6">
+                            <label></label>
+                          <a href="update_cliente.html" type="button" class="btn btn-warning form-control" id="update">Modifica</a>    
+                        </div>
+                          
+                        </div>
+                    </form>
+
+                    <br>
+
+                    <div>
+                        <table class="table table-bordered" style="background-color: white;" id="tabella">
+                            <thead>
+                              <tr>
+                                <th scope="col">id</th>
+                                <th scope="col">regione sociale</th>
+                                <th scope="col">indirizzo</th>
+                                <th scope="col">cap</th>
+                                <th scope="col">località</th>
+                                <th scope="col">provincia</th>
+                                <th scope="col">nazionalità</th>
+
+                                <th scope="col">codice fiscale</th>
+                                <th scope="col">data di nascita</th>
+                                <th scope="col">telefono</th>
+                                <th scope="col">email</th>
+                                <th scope="col">importo</th>
+
+                                <th scope="col">note</th>
+
+                              </tr>
+                            </thead>
+                           
+                          </table>
+                    </div>
+                    
+                </main>
+                <footer class="py-4 bg-dark mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Anagrafica Clienti 2021</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/delete.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
